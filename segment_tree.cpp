@@ -153,10 +153,12 @@ int main()
 	std::cerr << "tree.query(20, 25) = " << tree.query(20, 25) << "\n";
 	std::cerr << "tree.query(20, 20) = " << tree.query(20, 20) << "\n";
 	std::cerr << "tree.query(15, 25) = " << tree.query(15, 25) << "\n";
-	tree.insert(21, +2);
+	tree.insert(21, 3);
+	assert(tree.query(15, 20) == 2);
+	assert(tree.query(21, 25) == 3);
+	assert(tree.query(15, 25) == 5);
 	std::cerr << "tree.query(15, 20) = " << tree.query(15, 20) << "\n";
-	std::cerr << "tree.query(20, 25) = " << tree.query(20, 25) << "\n";
-	std::cerr << "tree.query(20, 20) = " << tree.query(20, 20) << "\n";
+	std::cerr << "tree.query(21, 25) = " << tree.query(21, 25) << "\n";
 	std::cerr << "tree.query(15, 25) = " << tree.query(15, 25) << "\n";
 	return 0;
 }
