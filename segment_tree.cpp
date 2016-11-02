@@ -135,14 +135,16 @@ private:
 		}
 		std::cerr << begin << "~" << end;
 	}
+#endif
 
 public:
 	void log_tree() const
 	{
+#ifndef NDEBUG
 		log_tree(root, min_value, max_value);
 		std::cerr << "\n";
-	}
 #endif
+	}
 };
 
 int main()
