@@ -73,7 +73,6 @@ private:
 
 	T query_internal(T begin, T end, const node_context& ctx) const
 	{
-		log_debug("query_internal(", begin, ", ", end, ", ", (unsigned long long)ctx.node, ", ", ctx.begin, ", ", ctx.end, ")");
 		if (ctx.node == nullptr || ctx.begin > end || ctx.end < begin)
 			return 0;
 
