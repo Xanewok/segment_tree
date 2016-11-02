@@ -27,8 +27,8 @@ class segment_tree
 		node* left;
 		node* right;
 
-		node() : value(T()) {}
-		node(T _value) : value(_value) {}
+		node() : value(T()), left(nullptr), right(nullptr) {}
+		node(T _value) : value(_value), left(nullptr), right(nullptr) {}
 		~node()
 		{
 			SAFE_DELETE(left);
