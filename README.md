@@ -6,7 +6,8 @@ Currently implements
 ```c++
 segment_tree<T>::segment_tree(T min, T max)
 void segment_tree<T>::insert(T key, T value)
-T segment_tree<T>::query(T key, T value)
+T segment_tree<T>::query(T key, T value) const
+void segment_tree<T>::clear()
 ```
 
 # Example

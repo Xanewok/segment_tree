@@ -115,6 +115,12 @@ public:
 		return query_internal(begin, end, node_context(root, min_value, max_value));
 	}
 
+	void clear()
+	{
+		delete root;
+		root = new node();
+	}
+
 #ifndef NDEBUG
 private:
 	// Prints a tree in a Newick format
